@@ -5,9 +5,9 @@ ret=$?
 
 if [ $ret -ne 0 ]
 then
-  npm install -g homebase-hass-bridge
+  yarn global add homebase-hass-bridge -prefix /usr/local
 else
-  npm update -g homebase-hass-bridge
+  yarn global upgrade homebase-hass-bridge -prefix /usr/local
 fi
 
 rhass
