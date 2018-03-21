@@ -8,8 +8,9 @@ MAINTAINER SchumyHao <bob-hjl@126.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update --fix-missing; \
-    apt-get install -yq bash
+RUN apt-get update && \
+    apt-get install -y bash && \
+    npm install -g homebase-hass-bridge@1.6.0
 
 USER root
 
